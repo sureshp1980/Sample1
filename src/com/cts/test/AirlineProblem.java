@@ -16,6 +16,7 @@ public class AirlineProblem {
         catch(IOException e){
             System.out.println("Could not connect to file airlines.txt.");
             
+            
             System.exit(0);
         }
         if(scannerToReadAirlines != null){
