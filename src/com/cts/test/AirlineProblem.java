@@ -28,6 +28,7 @@ public class AirlineProblem {
             while( scannerToReadAirlines.hasNext() ){
             	System.out.println();
             	System.out.println();
+            	System.out.println();
                 lineFromFile = scannerToReadAirlines.nextLine();
                 airlineNames = lineFromFile.split(",");
                 newAirline = new Airline(airlineNames);

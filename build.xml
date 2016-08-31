@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="CCAPWeb" default="compile" basedir=".">
+
+	<property file="./jenkins-build.properties" />
+
+	<!--Adds application related jars to classpath-->
+	<path id="compile.classpath">
+		<fileset dir="WebContent/WEB-INF/lib">
+			<include name="*.jar" />
+		</fileset>
+		
+	</path>
+
+	<!-- Deletes the existing build and war directory-->
+	<target name="clean">
+	
+	</target>
+
+	<!-- Creates the  build, war directory-->
+	<target name="init" depends="clean">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${war.dir}" />
+	</target>
+
+	<!-- Compiles the java code-->
+	<target name="compile" depends="init">
+		<javac destdir="${build.dir}" debug="true" srcdir="${source.dir}">
+		</javac>
+		<copy todir="${build.dir}">
+			<fileset dir="${source.dir}" includes="**/*.xml,**/*.properties,**/*.dtd,**/*.vm" />
+		</copy>
+	</target>
+
+	<!-- Builds CCAPWeb.war -->
+	<target name="build-war" depends="compile">
+		<war destfile="${war.dir}/CCAPWeb.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent" />
+			<lib dir="WebContent/WEB-INF/lib" />
+			<classes dir="${build.dir}" />
+
+		</war>
+	</target>
+
+	<!-- ============================================================ -->
+	<!-- Tomcat tasks -->
+	<!-- ============================================================ -->
+
+	<!--Adds catalina ant jar  to classpath-->
+	<path id="catalina-ant-classpath">
+		<fileset dir="${lib}">
+			<include name="catalina-ant.jar" />
+		</fileset>
+	</path>
+
+
+
+
+
+</project>
+
