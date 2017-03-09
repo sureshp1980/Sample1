@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class AirlineProblem {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         Scanner scannerToReadAirlines = null;
         try{
             scannerToReadAirlines = new Scanner(new File("airlines.txt"));
@@ -26,6 +26,8 @@ public class AirlineProblem {
             String[] airlineNames;
 
             while( scannerToReadAirlines.hasNext() ){
+            	System.out.println();
+            	System.out.println();
             	System.out.println();
                 lineFromFile = scannerToReadAirlines.nextLine();
                 airlineNames = lineFromFile.split(",");
@@ -50,7 +52,7 @@ public class AirlineProblem {
 
     private static boolean canRedeem(String current, String goal,
             ArrayList<String> pathForMiles, ArrayList<String> airlinesVisited,
-            ArrayList<Airline> network){
+            ArrayList<Airline> network) throws Exception{
         if(current.equals(goal)){
             //base case 1, I have found a path!
             pathForMiles.add(current);
