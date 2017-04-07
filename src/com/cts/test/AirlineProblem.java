@@ -25,6 +25,7 @@ public class AirlineProblem {
 	int count1;
 	int count2;		
 	int count3;		
+	
 	public static void main(String[] args) {
 		Scanner scannerToReadAirlines = null;
 		String str4 = "ccc";
