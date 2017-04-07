@@ -17,13 +17,13 @@ public class AirlineProblem {
 	private static final String str2 = "ccca";
 	private static final String str21 = "ccca";
 	private static final String str22 = "ccca";
-	
-	
+		
 	private static final String str3 = "";
 	private static final String str4 = "";
 	private static final String str5 = "";				
 	int count1;
 	int count2;		
+	
 	
 	int count3;	
 	
@@ -34,11 +34,11 @@ public class AirlineProblem {
 		String str4 = "ccc";
 		int count = 0;
 		int abc= 0;
-		String abc1 = null;
-							
-		String str5 = null;
-		try {
-			LOGGER.info("yudsyuwweuiweui weuhweiuyweuy weuyiuweyywe"
+			String abc1 = null;
+								
+			String str5 = null;
+			try {
+				LOGGER.info("yudsyuwweuiweui weuhweiuyweuy weuyiuweyywe"
 					+ "weiuweiywe weiweuiwe weiweywey weiuweyiwey"
 					+ "weiutweitwe weiweywe weiuweyywe");
 			LOGGER.info(str3 + str4 + str5);
@@ -191,7 +191,7 @@ System.out.println();
 				partners.add(data[i]);
 			try {
 				String str11 = "ccc";
-
+				
 			} catch (Exception e) {
 				Throwable root = ((null != e.getCause()) ? e.getCause() : e);
 				LOGGER.info(root.getMessage() + name1);
