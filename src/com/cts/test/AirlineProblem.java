@@ -24,6 +24,7 @@ public class AirlineProblem {
 	private static final String str5 = "";				
 	int count1;
 	int count2;		
+	
 	int count3;	
 	
 	
