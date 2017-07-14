@@ -12,7 +12,7 @@ public class SampleProject {
 	void bar() throws IOException{
 		
 		String zzz1 = "bhuviiii";
-		String fileName = null;
+		String fileName = new String();
 	//	baz(fileName);
 	//	secondMethod();
 		if (zzz1 != null) {
