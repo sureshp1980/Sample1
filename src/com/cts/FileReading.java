@@ -13,6 +13,7 @@ public class FileReading {
 
 	void bar() throws IOException{
 		try{
+			String abc = new String();
 		SampleProject prj=new SampleProject();
 		String zzz1 = "bhuviiii";
 		String fileName = null;
@@ -20,7 +21,8 @@ public class FileReading {
 		secondMethod();
 		if (zzz1 != null) {
 			fileName = zzz1;
-		}
+		}		
+		
 		}
 		catch(IOException x){
 			LOGGER.info(x.getMessage());
