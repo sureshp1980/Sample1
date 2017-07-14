@@ -1,12 +1,16 @@
 package com.cts.test;
 
+import java.util.logging.Logger;
+
 public class AirlineController {
 
 
+	private static final Logger LOGGER = Logger.getLogger("com.cts.test.AirlineController");
+
 	public static void testMthd() {
-		System.out.println("SAMPLE");
+		LOGGER.info("SAMPLE");
 		
-		System.out.println("SAMPLE1");
+		LOGGER.info("SAMPLE1");
 
 	}
 }

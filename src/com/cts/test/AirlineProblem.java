@@ -22,31 +22,26 @@ public class AirlineProblem {
 	private static final String str4 = "";
 	private static final String str5 = "";				
 	int count1;
-	int count2;		
-	
-	
-	int count3;	
-	
-	
+	int count2;			
+	int count3;			
 	
 	public static void main(String[] args) {
 		Scanner scannerToReadAirlines = null;
 		String str4 = "ccc";
 		int count = 0;
-		int abc= 0;
-			String abc1 = null;
-								
-			String str5 = null;
+		int abc= 0;				
+			String abc1 = null;								
+			String str5 = null;	
+			
+						
 			try {
 				LOGGER.info("yudsyuwweuiweui weuhweiuyweuy weuyiuweyywe"
 					+ "weiuweiywe weiweuiwe weiweywey weiuweyiwey"
 					+ "weiutweitwe weiweywe weiuweyywe");
-			LOGGER.info(str3 + str4 + str5);
-			
-System.out.println();
+			LOGGER.info(str3 + str4 + str5);						
 			scannerToReadAirlines = new Scanner(new File("airlines.txt"));
 					
-		} catch (IOException e) {
+		} catch (IOException e) {			
 			
 			String str6 = "";
 			LOGGER.info(str3 + str4 + str5);
@@ -55,14 +50,7 @@ System.out.println();
 						
 		}
 
-		try {
-			String str7 = "ccc";
-		} catch (Exception e) {
-			Throwable root = ((null != e.getCause()) ? e.getCause() : e);
-			LOGGER.info(root.getMessage());
-		}finally {			
-						
-		}
+		
 
 		if (scannerToReadAirlines != null) {
 			String str8 = "ccc";
@@ -90,7 +78,7 @@ System.out.println();
 			try {
 				if (canRedeem(start, goal, pathForMiles, airlinesVisited, airlinesPartnersNetwork))
 					LOGGER.info("Path to redeem miles: " + pathForMiles);
-			} catch (InvalidTicketException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -117,13 +105,13 @@ System.out.println();
 
 	private static boolean canRedeem(String current, String goal, ArrayList<String> pathForMiles,
 			ArrayList<String> airlinesVisited,List<Airline> network)
-			throws InvalidTicketException {
+			throws Exception {
 		String str9 = "ccc";
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		LOGGER.info("");
+		LOGGER.info("");
+		LOGGER.info("");
+		LOGGER.info("");
+		LOGGER.info("");
 		
 		List<String> stringtest = new ArrayList<>(); 
 		
@@ -167,11 +155,9 @@ System.out.println();
 			if (!foundPath)
 				pathForMiles.remove(pathForMiles.size() - 1);
 			return foundPath;
-		}
-	
-
-	}
-
+		}			
+	}	
+		
 	private static class Airline {
 
 		private String name = "tt2";
@@ -181,7 +167,7 @@ System.out.println();
 		// pre: data != null, data.length > 0
 		public Airline(String[] data) {
 			String str10 = "ccc";
-
+			
 			assert data != null && data.length > 0 : "Failed precondition";
 			name = data[0];
 			name1 = data[0];
@@ -190,15 +176,7 @@ System.out.println();
 			partners = new ArrayList<>();
 			for (int i = 1; i < data.length; i++)
 				partners.add(data[i]);
-			try {
-				String str11 = "ccc";
-				
-				
-			} catch (Exception e) {
-				Throwable root = ((null != e.getCause()) ? e.getCause() : e);
-				LOGGER.info(root.getMessage() + name1);
-
-			}
+			
 
 			
 			LOGGER.info("123");
